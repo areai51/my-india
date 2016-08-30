@@ -1,6 +1,7 @@
 # My India
 
-An app that gives statistical Information on various aspects of India. Data is pulled from http://data.gov.in
+My India is an app that gives statistical Information on various aspects of India. Data is pulled from http://data.gov.in
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.2.
 
