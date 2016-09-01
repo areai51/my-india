@@ -1,0 +1,19 @@
+.col-2 {
+  width: 16%;
+  height: 100%;
+  float: left;
+}
+.col-10 {
+  width: 84%;
+  float: left;
+}
+header {
+  background-color: #fff;
+  height: 80px;
+  -webkit-box-shadow: 0 6px 3px -6px black;
+  -moz-box-shadow: 0 6px 3px -6px black;
+  box-shadow: 0 6px 3px -6px black;
+}
+.main-container {
+  padding: 20px 65px;
+}
