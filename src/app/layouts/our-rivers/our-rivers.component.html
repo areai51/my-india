@@ -1,1 +1,35 @@
 <h1> Our Rivers </h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+<th>Sate</th>
+<th>Location</th>
+<th>Max Temp </th>
+<th>Min Temp.</th>
+<th>PH Value Max</th>
+<th>PH Value Min</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     
+    <tr *ngFor="let data of riversData">
+      <td>{{data.STATE}}</td>
+      <td>{{data.LOCATIONS}}</td>
+      <td>{{data.TEMPERATUREInDegreeCentigradeMax}}</td>
+      <td>{{data.TEMPERATUREInDegreeCentigradeMin}}</td>
+      <td>{{data.PH6585Max}}</td>
+      <td>{{data.PH6585Min}}</td>
+    
+  </tbody>
+</table> 
+
+
+<hr/>
+
+<pre>
+    {{riversData|json}}
+    </pre>

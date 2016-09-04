@@ -1,17 +1,19 @@
 <h1> Our Leaders </h1>
-<div>
-    {{rajyaSabha | json}}
-</div>
-<!-- <table>
+<!--<pre>
+    {{rajyaSabhaAttendance | json}}
+</pre>-->
+ <table>
   <thead>
     <tr>
-      <th *ngFor="let field of rajyaSabha.fields">{{field.label}}</th>
+      <th>Name </th>
+      <th>Attendance </th>
     </tr>
   </thead>
 
   <tbody>
-    <tr *ngFor="let rsMemberData of rajyaSabha.data">
-      <td *ngFor="let value of rsMemberData">{{value}}</td>
+    <tr *ngFor="let member of rajyaSabhaAttendance">
+      <td> {{member[2]}} <br/><i>{{member[6]}}</i></td>
+      <td> {{member[8]}}</td>
     </tr>
   </tbody>
-</table> -->
+</table>
