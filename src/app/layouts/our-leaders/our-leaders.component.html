@@ -1,19 +1,57 @@
 <h1> Our Leaders </h1>
-<!--<pre>
-    {{rajyaSabhaAttendance | json}}
-</pre>-->
- <table>
-  <thead>
-    <tr>
-      <th>Name </th>
-      <th>Attendance </th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <tr *ngFor="let member of rajyaSabhaAttendance">
-      <td> {{member[2]}} <br/><i>{{member[6]}}</i></td>
-      <td> {{member[8]}}</td>
-    </tr>
-  </tbody>
-</table>
+<!-- LOKSABHA Container -->
+<div id="lokSabha" class="data-wrapper">
+    <div class="data-container">
+        <h2 class="data-container__title">Lok Sabha 15 - Attendence</h2>
+        <div class="data-container__list">
+            <ul class="data-row" *ngFor="let member of lokSabhaAttendance; let i = index" [ngClass]="{hide: member[8]==='M' || member[8]==='LOP' || member[8]==='HDC'}">
+                <li class="data-column">
+                    <span class="data-container__serial-no">{{i+1}}</span>
+                </li>
+                <li class="data-column">
+                    <span class="data-container__member-name">{{member[2]}}</span>
+                    <span class="data-container__member-state"><em>{{member[6]}}</em></span>
+                </li>
+                <li class="data-column">
+                    <!-- <span class="data-container__serial-no">{{member[8]}}</span> -->
+                    <div class="progress-bar horizontal">
+                        <div class="progress-track">
+                            <div class="progress-fill" #progress>
+                                <!-- <span>100%</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- RAJYASABHA Container -->
+<div id="rajyaSabha" class="data-wrapper">
+    <div class="data-container">
+        <h2 class="data-container__title">Rajya Sabha 15 - Attendence</h2>
+        <div class="data-container__list">
+            <ul class="data-row" *ngFor="let member of rajyaSabhaAttendance; let i = index" [ngClass]="{hide: member[8]==='M' || member[8]==='LOP' || member[8]==='HDC'}">
+                <li class="data-column">
+                    <span class="data-container__serial-no">{{i+1}}</span>
+                </li>
+                <li class="data-column">
+                    <span class="data-container__member-name">{{member[2]}}</span>
+                    <span class="data-container__member-state"><em>{{member[6]}}</em></span>
+                </li>
+                <li class="data-column">
+                    <!-- <span class="data-container__serial-no">{{member[8]}}</span> -->
+                    <div class="progress-bar horizontal">
+                        <div class="progress-track">
+                            <div class="progress-fill" #progress>
+                                <!-- <span>100%</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

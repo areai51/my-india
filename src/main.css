@@ -10,3 +10,12 @@ body {
 img {
   max-width: 100%;
 }
+
+
+/******************
+**** Show-Hide ****
+*******************/
+.show { display: block !important; }
+.hide { display: none !important; }
+.shown { visibility: visible !important; }
+.hidden { visibility: hidden !important; }
