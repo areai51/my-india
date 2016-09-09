@@ -1,3 +1,11 @@
 <p>
   bar-chart works!
 </p>
+ <base-chart class="chart"
+         [datasets]="barChartData"
+         [labels]="barChartLabels"
+         [options]="barChartOptions"
+         [legend]="barChartLegend"
+         [chartType]="barChartType"
+         (chartHover)="chartHovered($event)"
+         (chartClick)="chartClicked($event)"></base-chart>

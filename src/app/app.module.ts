@@ -11,6 +11,7 @@ import { routing } from './app.routing';
 import { OurRiversComponent } from './layouts/our-rivers/our-rivers.component';
 import { GridTableComponent } from './components/grid-table/grid-table.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     OurLeadersComponent,
     OurRiversComponent,
     GridTableComponent,
-    BarChartComponent
+    BarChartComponent,
+    CHART_DIRECTIVES
   ],
   imports: [
     BrowserModule,
