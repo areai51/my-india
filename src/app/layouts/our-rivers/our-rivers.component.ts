@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OurRivers } from '../../shared/services/our-rivers';
-import { OurRiversService } from '../../shared/services/our-rivers.service';
-
+import { OurRiversService } from '../../shared/services/our-rivers/our-rivers.service';
 
 @Component({
   selector: 'app-our-rivers',
@@ -11,24 +9,21 @@ import { OurRiversService } from '../../shared/services/our-rivers.service';
 })
 export class OurRiversComponent implements OnInit {
   errorMessage: string;
-  riversData : any;
-  constructor(private _ourRiversService: OurRiversService) { }
+  riversData: any;
 
-  ngOnInit() {
-    this.getRiversData()
-    
+  constructor(private _ourRiversService: OurRiversService) {
   }
 
+  ngOnInit() {
+    this.getRiversData();
+  }
 
   getRiversData() {
     this._ourRiversService.getRiversData()
       .subscribe(
-      riversData => { this.riversData = riversData; 
-        console.log(this.riversData)},
-      error => this.errorMessage = <any>error
-      )
+        riversData => {
+          this.riversData = riversData;
+        },
+        error => this.errorMessage = <any>error);
   }
-
-
-
 }
