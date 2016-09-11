@@ -11,7 +11,7 @@ export default class BaseService {
   protected _extractData(res: Response) {
     let rsData = res.json();
     return rsData.data || {};
-  }
+  };
 
   protected _handleError(error: any) {
     let errMsg = (error.message) ? error.message :

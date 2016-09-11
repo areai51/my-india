@@ -1,0 +1,26 @@
+<div class="data-list__wrapper">
+  <div class="data-list__container">
+    <h2 class="data-list__title">
+      <span>{{ title || data[0].dataInfo.displayName }} 15 - Attendence</span>
+    </h2>
+    <div class="data-list__list">
+      <ul class="data-row" *ngFor="let member of data; let i = index">
+        <li class="data-column">
+          <span class="data-list__serial-no">{{i+1}}</span>
+        </li>
+        <li class="data-column">
+          <span class="data-list__member-name">{{member.memberInfo.displayName}}</span>
+          <span class="data-list__member-state"><em>{{member.memberInfo.memberState}}</em></span>
+        </li>
+        <li class="data-column">
+          <div class="progress-bar horizontal">
+            <div class="progress-track">
+              <div class="progress-fill">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
