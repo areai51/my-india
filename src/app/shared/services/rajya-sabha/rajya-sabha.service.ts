@@ -8,14 +8,14 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class RajyaSabhaService extends BaseService {
 
-  private _rajyaSabhaApiUrl = 'https://data.gov.in/node/982241/datastore/export/json';
+  private RAJYA_SABHA_API = 'https://data.gov.in/node/982241/datastore/export/json';
 
   constructor(protected _http: Http) {
     super(_http);
   }
 
   getAttendance(): Observable<RajyaSabha[]> {
-    return this.getAPIData(this._rajyaSabhaApiUrl);
+    return this.getAPIData(this.RAJYA_SABHA_API);
   }
 
 }

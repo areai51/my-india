@@ -12,5 +12,4 @@ export class CrimeInTheCityComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
