@@ -1,83 +1,90 @@
 .data-list__wrapper {
-    /* remove below 2 lines, if want to manage height according to data  */
-    height: 800px;
-    overflow-y: scroll;
-
-    width: 100%;
-    background: #fff;
-    padding: 10px;
+  /* remove below 2 lines, if want to manage height according to data  */
+  height: 800px;
+  overflow-y: scroll;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
 }
+
 .data-list__container {
-    display: block;
+  display: block;
 }
 
 .data-list__title {
-    padding: 20px;
+  padding: 20px;
 }
 
 ul.data-row {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
+
 .data-row {
-    border-bottom: 2px solid #f0f0f0;
-    margin: 20px;
-    padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  margin: 20px;
+  padding-bottom: 20px;
 
-    display: flex;
-    /*justify-content: center;*/
-    /*align-items: stretch;*/
+  display: flex;
+  /*justify-content: center;*/
+  /*align-items: stretch;*/
 
-    /** Vertically center */
-    /*align-items: center;*/
+  /** Vertically center */
+  /*align-items: center;*/
 
-    /** Horizontally center */
-    /*justify-content: center;*/
+  /** Horizontally center */
+  /*justify-content: center;*/
 }
+
 .data-row .data-column {
-    margin: 0;
-    clear: both;
+  margin: 0;
+  clear: both;
 }
+
 .data-row .data-column:nth-child(1) {
-    width: 10%;
-    text-align: center;
+  width: 10%;
+  text-align: center;
 }
+
 .data-row .data-column:nth-child(2) {
-    width: 40%;
+  width: 40%;
 }
+
 .data-row .data-column:nth-child(3) {
-    width: 50%;
+  width: 50%;
 }
 
 .data-list__member-state {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /**********************************************
 ***************** Prgress-Bar *****************
 ***********************************************/
-.progress-bar  {
-    float: left;
-    width: 80%;
-    /*height: 45px;
-    width: 100%;
-    padding: 12px 0;*/
+.progress-bar {
+  float: left;
+  width: 80%;
+  /*height: 45px;
+  width: 100%;
+  padding: 12px 0;*/
 }
+
 .progress-track {
-    position: relative;
-    width: 100%;
-    height: 20px;
-    background: #edf1f0;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #edf1f0;
 }
+
 .progress-fill {
-    position: relative;
-    background: #d6fabb;
-    height: 20px;
-    width: 0;
-    color: #000;
-    text-align: center;
-    font-size: 12px;
-    line-height: 20px;
+  position: relative;
+  background: #d6fabb;
+  height: 20px;
+  width: 0;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
 }

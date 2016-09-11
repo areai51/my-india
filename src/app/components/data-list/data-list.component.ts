@@ -1,62 +1,62 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
-    selector: 'data-list',
-    templateUrl: 'data-list.component.html',
-    styleUrls: ['data-list.component.css']
+  selector: 'data-list',
+  templateUrl: 'data-list.component.html',
+  styleUrls: ['data-list.component.css']
 })
 export class DataListComponent implements OnInit {
-    dataListWrapper: any;
+  dataListWrapper: any;
 
-    @Input() title;
-    @Input() data;
+  @Input() title;
+  @Input() data;
 
-    constructor(private _elm: ElementRef) { }
+  constructor(private _elm: ElementRef) {
+  }
 
-    ngOnInit() {
-        this.data.sort(this.sortByPercentageDesc);
+  ngOnInit() {
+    this.data.sort(this.sortByPercentageDesc);
+    let selector = this._elm.nativeElement;
+    this.dataListWrapper = selector.getElementsByClassName('data-list__wrapper');
+    this.createProgressBar(this.data, this.dataListWrapper[0]);
+  }
 
-        let selector = this._elm.nativeElement;
-        this.dataListWrapper = selector.getElementsByClassName('data-list__wrapper');
-
-        this.createProgressBar(this.data, this.dataListWrapper[0]);
-    }
-
-    createProgressBar(data: Array<any>, wrapper: any) {
-        // console.log('data------- ', data)
-        if (data) {
-            setTimeout(function() {
-                let elements = wrapper.getElementsByClassName('progress-fill');
-                for (let i = 0; i < elements.length - 1; i++) {
-                    let elm = elements[i];
-                    elm.setAttribute('style', `width: ${data[i].totalAttendence.percentage}`);
-                }
-          }, 10);
-      }
-    }
-
-    sortByPercentageDesc(a, b) {
-        if (a.totalAttendence.value < b.totalAttendence.value) {
-            return 1;
+  createProgressBar(data: Array<any>, wrapper: any) {
+    if (data) {
+      setTimeout(function () {
+        let elements = wrapper.getElementsByClassName('progress-fill');
+        for (let i = 0; i < elements.length - 1; i++) {
+          let elm = elements[i];
+          elm.setAttribute('style', `width: ${data[i].totalAttendence.percentage}`);
         }
-        if (a.totalAttendence.value > b.totalAttendence.value) {
-            return -1;
-        }
-        return 0;
+      }, 10);
     }
-    sortByPercentageAesc(a, b) {
-        if (a.totalAttendence.value < b.totalAttendence.value) {
-            return -1;
-        }
-        if (a.totalAttendence.value > b.totalAttendence.value) {
-            return 1;
-        }
-        return 0;
+  }
+
+  sortByPercentageDesc(a, b) {
+    if (a.totalAttendence.value < b.totalAttendence.value) {
+      return 1;
     }
-    sortByName(a, b) {
-        let x = a.memberInfo.displayName.toLowerCase();
-        let y = b.memberInfo.displayName.toLowerCase();
-        return x < y ? -1 : x > y ? 1 : 0;
+    if (a.totalAttendence.value > b.totalAttendence.value) {
+      return -1;
     }
+    return 0;
+  }
+
+  sortByPercentageAesc(a, b) {
+    if (a.totalAttendence.value < b.totalAttendence.value) {
+      return -1;
+    }
+    if (a.totalAttendence.value > b.totalAttendence.value) {
+      return 1;
+    }
+    return 0;
+  }
+
+  sortByName(a, b) {
+    let x = a.memberInfo.displayName.toLowerCase();
+    let y = b.memberInfo.displayName.toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+  }
 
 }

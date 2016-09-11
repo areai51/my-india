@@ -1,14 +1,16 @@
 our-leaders {
-    clear: both;
+  clear: both;
 }
 
 .our-leaders__data-list-wrapper .our-leaders__data-list:nth-child(1) {
-    margin-right: 25px;
+  margin-right: 25px;
 }
+
 .our-leaders__data-list-wrapper .our-leaders__data-list:nth-child(2) {
-    margin-left: 25px;
+  margin-left: 25px;
 }
+
 .our-leaders__data-list {
-    display: inline-block;
-    width: 46%;
+  display: inline-block;
+  width: 46%;
 }
