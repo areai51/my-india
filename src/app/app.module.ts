@@ -12,6 +12,7 @@ import { OurRiversComponent } from './layouts/our-rivers/our-rivers.component';
 import { GridTableComponent } from './components/grid-table/grid-table.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { DataListComponent } from './components/data-list/data-list.component';
+import { AccidentInCitiesComponent } from './layouts/accident-in-cities/accident-in-cities.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DataListComponent } from './components/data-list/data-list.component';
     OurRiversComponent,
     GridTableComponent,
     BarChartComponent,
-    DataListComponent
+    DataListComponent,
+    AccidentInCitiesComponent
   ],
   imports: [
     BrowserModule,
