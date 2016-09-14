@@ -52,7 +52,7 @@ export class BarChartComponent implements OnInit {
         legend: {
           position: 'bottom',
           labels: {
-            fontColor: 'rgb(217, 171, 114)',
+            fontColor: 'rgb(0, 0, 0)',
             boxWidth: 20
           }
         },

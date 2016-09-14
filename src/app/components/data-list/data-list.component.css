@@ -78,6 +78,17 @@ ul.data-row {
   background: #edf1f0;
 }
 
+.progress-info {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  top: 2px;
+  z-index: 9;
+}
+
 .progress-fill {
   position: relative;
   background: #d6fabb;

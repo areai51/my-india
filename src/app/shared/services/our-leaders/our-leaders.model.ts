@@ -58,9 +58,10 @@ export let OurLeadersModel = {
     let total_sittings = this.sittingInfo(data).totalSittings;
     let signed_register = this.sittingInfo(data).noOfDaysMemberSignedRegister;
     let attendence = (signed_register === 'NA') ? 0 : (signed_register / total_sittings) * 100;
+    let fixedNumber = attendence.toFixed();
 
     return {
-      percentage: attendence.toString() + '%',
+      percentage: fixedNumber.toString() + '%',
       value: attendence,
       unit: '%'
     };
