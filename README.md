@@ -38,3 +38,9 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Contributors
+
+[<img alt="keshavmesta" src="https://avatars.githubusercontent.com/u/2605115?v=3&s=117" width="117">](https://github.com/keshavmesta)[<img alt="vichu1988" src="https://avatars.githubusercontent.com/u/7909473?v=3&s=117" width="117">](https://github.com/vichu1988)[<img alt="kmesta-sapient" src="https://avatars.githubusercontent.com/u/6039898?v=3&s=117" width="117">](https://github.com/kmesta-sapient)[<img alt="Aakash-Goel" src="https://avatars.githubusercontent.com/u/8242022?v=3&s=117" width="117">](https://github.com/Aakash-Goel)[<img alt="areai51" src="https://avatars.githubusercontent.com/u/357862?v=3&s=117" width="117">](https://github.com/areai51)
+
+

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '.col-2',
+  selector: 'side-bar',
   templateUrl: 'side-bar.component.html',
   styleUrls: ['side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,37 +1,74 @@
-import { Component, OnInit } from '@angular/core';
-import { CHART_DIRECTIVES } from 'ng2-charts/ng2-charts';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
+// @Todo: issue when trying to load using es6 import statement
+let Chart = require('chart.js/src/chart.js');
+
 @Component({
-  selector: 'base-chart-container',
+  selector: 'bar-chart',
   templateUrl: 'bar-chart.component.html',
   styleUrls: ['bar-chart.component.css']
 })
 export class BarChartComponent implements OnInit {
+  chartWrapper: any;
+  barChart: any;
 
-  constructor() { }
+  @Input('title') chartTitle: string;
+  @Input('titleDisplay') chartTitleDisplay: boolean;
+  @Input('dataSets') chartDataSets: Array<any>;
+  @Input('dataLabels') chartDataLabels: Array<any>;
+
+  constructor(private _elm: ElementRef) {
+  }
+
+  private _initBarChartOptions = () => {
+    Chart.defaults.global.elements.rectangle.borderWidth = 0;
+    Chart.defaults.global.maintainAspectRatio = false;
+  }
 
   ngOnInit() {
+    let selector = this._elm.nativeElement;
+    this.chartWrapper = selector.getElementsByClassName('bar-chart');
   }
 
-    public barChartOptions:any = {
-    scaleShowVerticalLines: false,
-    responsive: true
-  };
-  public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public barChartType:string = 'bar';
-  public barChartLegend:boolean = true;
-
-  public barChartData:any[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label:'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label:'Series B'}
-  ];
-
-  // events
-  public chartClicked(e:any):void {
-    console.log(e);
+  waitingForChartData() {
+    this._initBarChartOptions();
+    if (this.chartDataLabels.length > 0) {
+      this.createBarChart();
+    }
   }
 
-  public chartHovered(e:any):void {
-    console.log(e);
+  createBarChart = () => {
+    let ctx = this.chartWrapper.barChart.getContext('2d');
+    this.barChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: this.chartDataLabels[0],
+        datasets: this.chartDataSets
+      },
+      options: {
+        title: {
+          display: true,
+          text: this.chartTitle
+        },
+        legend: {
+          position: 'bottom',
+          labels: {
+            fontColor: 'rgb(217, 171, 114)',
+            boxWidth: 20
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            categoryPercentage: 1,
+            barPercentage: 0.5
+          }]
+        }
+      }
+    });
   }
 
 }

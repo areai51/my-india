@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -11,7 +11,8 @@ import { routing } from './app.routing';
 import { OurRiversComponent } from './layouts/our-rivers/our-rivers.component';
 import { GridTableComponent } from './components/grid-table/grid-table.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
+import { DataListComponent } from './components/data-list/data-list.component';
+import { AccidentInCitiesComponent } from './layouts/accident-in-cities/accident-in-cities.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
     OurRiversComponent,
     GridTableComponent,
     BarChartComponent,
-    CHART_DIRECTIVES
+    DataListComponent,
+    AccidentInCitiesComponent
   ],
   imports: [
     BrowserModule,
