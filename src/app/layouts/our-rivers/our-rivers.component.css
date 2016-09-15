@@ -1,0 +1,13 @@
+table{
+background-color:#fff;
+padding: 5px;
+}
+
+tr{
+
+}
+
+td{
+    border: thin solid #eaeaea;
+    padding:3px 5px; 
+}
