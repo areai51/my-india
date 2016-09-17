@@ -6,8 +6,8 @@ import { BarChartComponent } from '../../components/bar-chart/bar-chart.componen
 @Component({
   selector: 'accident-in-cities',
   providers: [AccidentInCitiesService],
-  templateUrl: 'accident-in-cities.component.html',
-  styleUrls: ['accident-in-cities.component.css']
+  templateUrl: './accident-in-cities.component.html',
+  styleUrls: ['./accident-in-cities.component.css']
 })
 export class AccidentInCitiesComponent implements OnInit {
   @ViewChild(BarChartComponent)

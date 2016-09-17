@@ -1,5 +1,6 @@
 /* tslint:disable:no-unused-variable */
 
+import { TestBed, async } from '@angular/core/testing';
 import { SideBarComponent } from './side-bar.component';
 
 describe('Component: SideBar', () => {

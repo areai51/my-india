@@ -4,8 +4,8 @@ let Chart = require('chart.js/src/chart.js');
 
 @Component({
   selector: 'bar-chart',
-  templateUrl: 'bar-chart.component.html',
-  styleUrls: ['bar-chart.component.css']
+  templateUrl: './bar-chart.component.html',
+  styleUrls: ['./bar-chart.component.css']
 })
 export class BarChartComponent implements OnInit {
   chartWrapper: any;
@@ -70,5 +70,4 @@ export class BarChartComponent implements OnInit {
       }
     });
   }
-
 }

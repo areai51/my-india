@@ -4,8 +4,8 @@ import { OurRiversService } from '../../shared/services/our-rivers/our-rivers.se
 @Component({
   selector: 'app-our-rivers',
   providers: [OurRiversService],
-  templateUrl: 'our-rivers.component.html',
-  styleUrls: ['our-rivers.component.css']
+  templateUrl: './our-rivers.component.html',
+  styleUrls: ['./our-rivers.component.css']
 })
 export class OurRiversComponent implements OnInit {
   errorMessage: string;

@@ -2,8 +2,8 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'data-list',
-  templateUrl: 'data-list.component.html',
-  styleUrls: ['data-list.component.css']
+  templateUrl: './data-list.component.html',
+  styleUrls: ['./data-list.component.css']
 })
 export class DataListComponent implements OnInit {
   dataListWrapper: any;
