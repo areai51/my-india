@@ -1,0 +1,13 @@
+<h1> Our Leaders </h1>
+
+<div class="our-leaders__data-list-wrapper" *ngIf="!errorMessage">
+    <div class="our-leaders__data-list" *ngFor="let dataArr of ourLeadersData;">
+        <data-list [data]="dataArr"></data-list>
+    </div>
+</div>
+<div *ngIf="errorMessage">
+    <p>"Ah!, the server is down". We're sorry for the inconvenience</p>
+    <p>
+        Please try back again after some time.
+    </p>
+</div>
