@@ -22,7 +22,7 @@ export class BarChartComponent implements OnInit {
   private _initBarChartOptions = () => {
     Chart.defaults.global.elements.rectangle.borderWidth = 0;
     Chart.defaults.global.maintainAspectRatio = false;
-  }
+  };
 
   ngOnInit() {
     let selector = this._elm.nativeElement;
